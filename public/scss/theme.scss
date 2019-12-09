@@ -1,0 +1,91 @@
+#merchsys-shop {
+	// Core variables and mixins
+	//@import "variables";
+	//@import "mixins";
+
+	@import "font-awesome/font-awesome";
+	
+	nav {
+		a {
+			color: inherit;
+		}
+	}
+	.merchsys-shop-container {
+		/*padding: $spacer*2 0*/
+	}
+	/* .product {
+		a {
+			padding: $spacer;
+			text-align: center;
+		}
+		img {
+			display: inline-block;
+		}
+	}*/
+	.basket {
+		button {
+			padding: 16px;
+		}
+		input, button {
+			margin: 0;
+			padding-top: 13px;
+			padding-bottom: 13px;
+			line-height: 1em;
+		}
+		article {
+			form {
+				display: inline-block;
+				float: left;
+				margin-right: 5px;
+				&.amount {
+					input {
+						width: 80px;
+						margin-right: 2px;
+						float: left;
+					}
+				}
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	.message {
+		padding: 22px;
+		margin: 10px 0 30px 0;
+		border-left: 10px solid #2e3561;
+		text-transform: text-uppercase;
+	}
+}
+.menu-item {
+	i {
+		margin-left: 5px;
+		position: relative;
+	}
+	span.amount {
+		font-size: .9em;
+		height: 15px;
+		width: 15px;
+		display: inline-block;
+		border-radius: 50%;
+		background-color: white;
+		color: #2e3561;
+		text-align: center;
+		line-height: 15px;
+		position: absolute;
+		top: -5px;
+		right: -50%;
+		font-family: arial;
+	}
+}
+.merchsys-main-image {
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+.wpb_text_column  {
+	#merchsys-shop {
+		p:last-child {
+			margin-bottom: 28px;
+		}
+	}
+}
