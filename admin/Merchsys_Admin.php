@@ -33,7 +33,7 @@ class MerchSys_Admin
     public function enqueue_scripts()
     {
         wp_register_script($this->plugin_name . '-admin', plugin_dir_url(__FILE__) . 'js/' . $this->plugin_name . '-admin.js', array(
-            'jquery'
+            'jquery',
         ), $this->version, false);
         wp_enqueue_script($this->plugin_name . '-admin');
     }
@@ -46,8 +46,8 @@ class MerchSys_Admin
     {
         add_menu_page('Merch Systems Admin', 'Merch Systems', 'manage_options', $this->plugin_name . '_admin_menu', array(
             $this,
-            'merchsys_settings_page'
-        ), plugins_url('merchsys/images/icon.png'), 40);
+            'merchsys_settings_page',
+        ), plugins_url('merch-systems/images/icon.png'), 40);
     }
 
     /**
@@ -60,7 +60,7 @@ class MerchSys_Admin
 
         if ($plugin_file == MerchSys_Settings::PLUGIN_NAME . '/' . $this->plugin_name . '.php') {
             $settings = array(
-                'settings' => '<a href="admin.php?page=' . $this->plugin_name . '_admin_menu">' . __('Settings', 'General') . '</a>'
+                'settings' => '<a href="admin.php?page=' . $this->plugin_name . '_admin_menu">' . __('Settings', 'General') . '</a>',
             );
             $actions = array_merge($settings, $actions);
         }
@@ -73,7 +73,7 @@ class MerchSys_Admin
      */
     public function merchsys_settings_page()
     {
-        if (! current_user_can('manage_options')) {
+        if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
         $pages = get_pages();
@@ -112,9 +112,11 @@ class MerchSys_Admin
     {
         $fields = MerchSys_Settings::$registration_fields;
         foreach ($fields as $field) {
-            if ($field['type'] == 'label' || isset($field['compare']) || $field['name'] == 'user_email')
+            if ($field['type'] == 'label' || isset($field['compare']) || $field['name'] == 'user_email') {
                 continue;
-            if (isset($_POST[$field['name']]) && ((! empty($_POST[$field['name']]) && isset($field['required']) && $field['required'] === true) || $field['required'] == false || ! isset($field['required']))) {
+            }
+
+            if (isset($_POST[$field['name']]) && ((!empty($_POST[$field['name']]) && isset($field['required']) && $field['required'] === true) || $field['required'] == false || !isset($field['required']))) {
                 update_user_meta($user_id, $field['name'], sanitize_text_field($_POST[$field['name']]));
             }
         }
