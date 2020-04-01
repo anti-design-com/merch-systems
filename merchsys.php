@@ -5,7 +5,7 @@
  * Description: Core plugin to integrate merch.systems into your Wordpress website
  * Plugin URI: https://merch.systems
  * Author: anti-design.com GmbH & Co. KG
- * Author URI: http://anti-design.com
+ * Author URI: https://anti-design.com
  */
 
 // If this file is called directly, abort.
