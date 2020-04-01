@@ -64,7 +64,7 @@ class MerchSys_Public
         try {
             $soap_options = array(
                 'login' => $soap_login,
-                'password' => $soap_pass,
+                'password' => $soap_pass
             );
             self::$client = new SoapClient($soap_url, $soap_options);
         } catch (Exception $e) {
@@ -114,7 +114,7 @@ class MerchSys_Public
         $url = str_replace(array(
             'http://',
             'https://',
-            '/wsdl.php',
+            '/wsdl.php'
         ), '', $url);
         return 'https://' . $url . '/wsdl.php';
     }
@@ -138,10 +138,8 @@ class MerchSys_Public
      */
     private function set_cookie()
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
         try {
             if (session_status() !== PHP_SESSION_ACTIVE) {
                 session_start();
@@ -158,10 +156,8 @@ class MerchSys_Public
      */
     private function get_session()
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
         try {
             self::$client->getSession();
         } catch (Exception $e) {
@@ -178,14 +174,10 @@ class MerchSys_Public
      */
     public function set_locale($locale = '')
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
-        if (strlen($locale) > 0) {
+        if (strlen($locale) > 0)
             $this->locale = $locale;
-        }
-
         try {
             self::$client->setLocale($this->locale);
         } catch (Exception $e) {
@@ -199,10 +191,8 @@ class MerchSys_Public
      */
     public function set_currency()
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
         try {
             self::$currency = self::$client->getCurrency();
         } catch (Exception $e) {
@@ -232,7 +222,7 @@ class MerchSys_Public
      *            The error to add to the WP admin page
      * @return string The html block for the error notification
      */
-    public static function wrap_error($string)
+    static function wrap_error($string)
     {
         return '<div class="error notice"><p>' . MerchSys_Settings::PLUGIN_NAME . ' | ' . $string . '</p></div>';
     }
@@ -285,7 +275,7 @@ class MerchSys_Public
             self::$user = get_user_meta(self::$user_id);
             $user = get_userdata(self::$user_id);
             self::$user['user_email'] = array(
-                $user->user_email,
+                $user->user_email
             );
         } else {
             self::$user = null;
@@ -297,15 +287,12 @@ class MerchSys_Public
      */
     public static function get_countries()
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
         try {
             return self::$client->getCountries();
         } catch (Exception $e) {
-            $class = new self();
-            $clas->error_client($e);
+            $this->error_client($e);
         }
     }
 
@@ -314,15 +301,12 @@ class MerchSys_Public
      */
     public static function get_payment_methods()
     {
-        if (self::$client == null) {
+        if (self::$client == null)
             return;
-        }
-
         try {
             return self::$client->getPayments();
         } catch (Exception $e) {
-            $class = new self();
-            $clas->error_client($e);
+            $this->error_client($e);
         }
     }
 }
