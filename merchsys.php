@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: merch.systems
- * Version: 1.0.0
+ * Version: 1.0.4
  * Description: Core plugin to integrate merch.systems into your Wordpress website
  * Plugin URI: https://merch.systems
  * Author: anti-design.com GmbH & Co. KG
@@ -9,11 +9,11 @@
  */
 
 // If this file is called directly, abort.
-if (! defined('WPINC')) {
+if (!defined('WPINC')) {
     die();
 }
 
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
     die();
 }
 
@@ -53,4 +53,3 @@ function run_merchsys()
     $plugin->run();
 }
 run_merchsys();
-?>
