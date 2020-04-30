@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: merch.systems
- * Version: 1.0.4
+ * Version: 1.0.5
  * Description: Core plugin to integrate merch.systems into your Wordpress website
  * Plugin URI: https://merch.systems
  * Author: anti-design.com GmbH & Co. KG
