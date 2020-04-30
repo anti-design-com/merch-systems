@@ -85,7 +85,11 @@ msgid "Your address"
 msgstr ""
 
 #: includes/Merchsys_Settings.php:169
-msgid "Street and number"
+msgid "Street"
+msgstr ""
+
+#: includes/Merchsys_Settings.php:169
+msgid "Number"
 msgstr ""
 
 #: includes/Merchsys_Settings.php:170

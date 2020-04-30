@@ -269,7 +269,10 @@ msgstr "404 Seite nicht gefunden"
 #~ msgstr "Datenschutzerklärung gelesen"
 
 #~ msgid "Street"
-#~ msgstr "Straße und Hausnummer"
+#~ msgstr "Straße"
+
+#~ msgid "number"
+#~ msgstr "Hausnummer"
 
 #~ msgid ""
 #~ "Please select the page with the shop shortcode in your Merchsys settings "
