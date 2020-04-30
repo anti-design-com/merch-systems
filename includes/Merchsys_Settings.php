@@ -51,14 +51,14 @@ class MerchSys_Settings
             'type' => 'text',
             'required' => true,
             'label' => 'Username',
-            'placeholder' => 'Username'
+            'placeholder' => 'Username',
         ),
         array(
             'name' => self::FIELD_PASSWORD,
             'type' => 'password',
             'required' => true,
             'label' => 'Password',
-            'placeholder' => 'Password'
+            'placeholder' => 'Password',
         ),
         array(
             'name' => 'password_confirm',
@@ -66,8 +66,8 @@ class MerchSys_Settings
             'required' => true,
             'compare' => self::FIELD_PASSWORD,
             'label' => 'Confirm password',
-            'placeholder' => 'Confirm password'
-        )
+            'placeholder' => 'Confirm password',
+        ),
     );
 
     /**
@@ -79,7 +79,7 @@ class MerchSys_Settings
             'type' => 'email',
             'required' => true,
             'label' => 'Email',
-            'placeholder' => 'Email'
+            'placeholder' => 'Email',
         ),
         array(
             'name' => 'email_confirm',
@@ -87,66 +87,73 @@ class MerchSys_Settings
             'required' => true,
             'compare' => self::FIELD_EMAIL,
             'label' => 'Confirm Email',
-            'placeholder' => 'Confirm Email'
+            'placeholder' => 'Confirm Email',
         ),
         array(
             'name' => 'personal_details',
             'type' => 'label',
-            'title' => 'Your personal details'
+            'title' => 'Your personal details',
         ),
         array(
             'name' => 'company',
             'type' => 'text',
             'required' => false,
             'label' => 'Company',
-            'placeholder' => 'Company'
+            'placeholder' => 'Company',
         ),
         array(
             'name' => 'first_name',
             'type' => 'text',
             'required' => true,
             'label' => 'First name',
-            'placeholder' => 'First name'
+            'placeholder' => 'First name',
         ),
         array(
             'name' => 'last_name',
             'type' => 'text',
             'required' => true,
             'label' => 'Last name',
-            'placeholder' => 'Last name'
+            'placeholder' => 'Last name',
         ),
         array(
             'name' => 'phone',
             'type' => 'text',
             'required' => false,
             'label' => 'Phone',
-            'placeholder' => 'Phone'
+            'placeholder' => 'Phone',
         ),
         array(
             'name' => 'address',
             'type' => 'label',
-            'title' => 'Your address'
+            'title' => 'Your address',
         ),
         array(
             'name' => 'street',
             'type' => 'text',
             'required' => true,
-            'label' => 'Street and number',
-            'placeholder' => 'Street'
+            'label' => 'Street',
+            'placeholder' => 'Street',
+        ),
+        array(
+            'name' => 'number',
+            'type' => 'text',
+            'required' => true,
+            'label' => 'Number',
+            'placeholder' => 'Number',
         ),
         array(
             'name' => 'zip',
             'type' => 'text',
             'required' => true,
             'label' => 'Postcode',
-            'placeholder' => 'Postcode'
+            'placeholder' => 'Postcode',
         ),
         array(
             'name' => 'city',
             'type' => 'text',
             'required' => true,
             'label' => 'City',
-            'placeholder' => 'City'
+            'placeholder' => 'City',
         ),
         array(
             'name' => 'country',
@@ -154,17 +161,17 @@ class MerchSys_Settings
             'required' => true,
             'label' => 'Country',
             'options_list' => array(
-                ''
+                '',
             ),
-            'options_list_method' => 'get_countries'
+            'options_list_method' => 'get_countries',
         ),
         array(
             'name' => 'privacy_accepted',
             'type' => 'checkbox',
             'required' => true,
             'link' => 'privacy',
-            'label' => 'Privacy read and accepted'
-        )
+            'label' => 'Privacy read and accepted',
+        ),
     );
 
     /**
@@ -187,7 +194,7 @@ class MerchSys_Settings
         'success.orders.deleteamount' => 'The product has been deleted.',
         'success.orders.insertitem' => 'The item has been added.',
         'success.orders.insertitem.corrected' => 'The item has been added, but the amount has been reduced due to the availability of the item.',
-        'success.voucher' => 'The voucher has been added to the shopping cart.'
+        'success.voucher' => 'The voucher has been added to the shopping cart.',
     );
 }
 
@@ -206,7 +213,8 @@ __('First name');
 __('Last name');
 __('Phone');
 __('Your address');
-__('Street and number');
+__('Street');
+__('Number');
 __('Postcode');
 __('City');
 __('Country');
