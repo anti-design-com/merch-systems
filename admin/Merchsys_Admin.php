@@ -19,26 +19,6 @@ class MerchSys_Admin
     }
 
     /**
-     * WP Hook called to add the css files to the admin part
-     */
-    public function enqueue_styles()
-    {
-        wp_enqueue_style($this->plugin_name . '-admin', plugin_dir_url(__FILE__) . 'css/' . $this->plugin_name . '-admin.css', array(), $this->version, 'all');
-    }
-
-    /**
-     * Method to add the js files for the admin part
-     * WP Hook called from the MerchSys Class
-     */
-    public function enqueue_scripts()
-    {
-        wp_register_script($this->plugin_name . '-admin', plugin_dir_url(__FILE__) . 'js/' . $this->plugin_name . '-admin.js', array(
-            'jquery',
-        ), $this->version, false);
-        wp_enqueue_script($this->plugin_name . '-admin');
-    }
-
-    /**
      * Method to add a Merchsys Admin page to the backend
      * WP Hook called from the MerchSys Class
      */

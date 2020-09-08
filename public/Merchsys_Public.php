@@ -238,18 +238,6 @@ class MerchSys_Public
     }
 
     /**
-     * The method to load css styles for the plugin
-     */
-    public function enqueue_styles()
-    {}
-
-    /**
-     * The method to load the js for the plugin
-     */
-    public function enqueue_scripts()
-    {}
-
-    /**
      * The method lo load all the file dependencies for the public part of the plugin
      */
     private function load_dependencies()
